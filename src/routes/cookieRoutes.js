@@ -1,9 +1,9 @@
-t express = require("express");
+const express = require("express");
 const router = express.Router();
 const {
-	  cookieConsentAccept,
-	  cookieConsentDecline,
-	  checkCookieConsent,
+  cookieConsentAccept,
+  cookieConsentDecline,
+  checkCookieConsent,
 } = require("../controllers/cookieControllers.js");
 
 router.post("/accept", cookieConsentAccept);
