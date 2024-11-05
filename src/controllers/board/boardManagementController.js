@@ -40,7 +40,7 @@ const deleteBoard = async (req, res) => {
 
   try {
     const [boardRows] = await pool.query(
-      `SELECT * FROM boards WHERE id = ? created_by = ?`,
+      `SELECT * FROM boards WHERE id = ? AND created_by = ?`,
       [boardId, userId]
     );
 
